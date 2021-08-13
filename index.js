@@ -27,7 +27,7 @@ let player1 = prompt('Player 1 do you think the next card will be higher or lowe
 console.log('the next card is ' + tableNumber2)
 
 if (tableNumber1 > tableNumber2 && player1 == 'higher'){
-  console.log('u fail good job')
+  console.log('u fail good job, you get 0 points')
 } else if (tableNumber1 < tableNumber2 && player1 == 'higher'){
   console.log('u got it right')
   point1++
@@ -37,7 +37,27 @@ if (tableNumber1 > tableNumber2 && player1 == 'higher'){
   point1++
   console.log('player 1 you now have ' + point1 + ' points')
 } else if (tableNumber1 < tableNumber2 && player1 == 'lower'){
-  console.log('lol u got it wrong')
+  console.log('lol u got it wrong, you get 0 points')
+}
+
+console.log('The next card that has been dealt is ' + tableNumber1)
+
+let player2 = prompt('Player 2 do you think the next card will be higher or lower?')
+
+console.log('the next card is ' + tableNumber2)
+
+if (tableNumber1 > tableNumber2 && player2 == 'higher'){
+  console.log('u fail good job, you get 0 points')
+} else if (tableNumber1 < tableNumber2 && player2 == 'higher'){
+  console.log('u got it right')
+  point2++
+  console.log('Player 1 you now have ' + point2 + ' points' )
+} else if (tableNumber1 > tableNumber2 && player2 == 'lower'){
+  console.log('u got it right')
+  point2++
+  console.log('player 1 you now have ' + point2 + ' points')
+} else if (tableNumber1 < tableNumber2 && player2 == 'lower'){
+  console.log('lol u got it wrong, you get 0 points')
 }
 
 let playAgain = prompt('Do you want to play again?')
