@@ -4,7 +4,7 @@
 //Due - Monday 30 August
 
 //Explanation of how the game works
-console.log('Welcome to the card game! A card will be delt and you will have to guess if the next card that is delt will be higher or lower. If what you put is true you will get a point. First to 3 points wins!')
+console.log('Welcome to the card game! A card will be dealt and you will have to guess if the next card that is dealt will be higher or lower. If what you put is true you will get a point. First to 3 points wins!')
 
 let point1 = 0;
 let point2 = 0;
@@ -15,7 +15,10 @@ let length = number.length
 let tableNumber1 = Math.floor(Math.random() * length + 1);
 let tableNumber2 = Math.floor(Math.random() * length + 1);
 
-console.log('The card that has been delt is ' + tableNumber1)
+
+play();
+function play(){
+console.log('The card that has been dealt is ' + tableNumber1)
 
 
 
@@ -35,5 +38,14 @@ if (tableNumber1 > tableNumber2 && player1 == 'higher'){
   console.log('player 1 you now have ' + point1 + ' points')
 } else if (tableNumber1 < tableNumber2 && player1 == 'lower'){
   console.log('lol u got it wrong')
+}
+
+let playAgain = prompt('Do you want to play again?')
+
+if(playAgain == 'no'){
+  console.log('okay, GAME OVER')
+} else if (playAgain == 'yes'){
+  play();
+}
 }
 
