@@ -12,14 +12,18 @@ let point2 = 0;
 let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
 let length = number.length
-let tableNumber1 = Math.floor(Math.random() * length + 1);
-let tableNumber2 = Math.floor(Math.random() * length + 1);
+
+
 
 
 play();
 function play(){
-console.log('The card that has been dealt is ' + tableNumber1)
 
+let tableNumber1 = Math.floor(Math.random() * length + 1);
+let tableNumber2 = Math.floor(Math.random() * length + 1);
+
+
+console.log('The card that has been dealt is ' + tableNumber1)
 
 
 let player1 = prompt('Player 1 do you think the next card will be higher or lower?')
@@ -39,6 +43,9 @@ if (tableNumber1 > tableNumber2 && player1 == 'higher'){
 } else if (tableNumber1 < tableNumber2 && player1 == 'lower'){
   console.log('lol u got it wrong, you get 0 points')
 }
+
+tableNumber1 = Math.floor(Math.random() * length + 1);
+tableNumber2 = Math.floor(Math.random() * length + 1);
 
 console.log('The next card that has been dealt is ' + tableNumber1)
 
