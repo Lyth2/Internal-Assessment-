@@ -14,7 +14,7 @@ let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 let length = number.length
 
 
-
+do{
 
 play();
 function play(){
@@ -67,6 +67,11 @@ if (tableNumber1 > tableNumber2 && player2 == 'higher'){
   console.log('lol u got it wrong, you get 0 points')
 }
 
+}
+}while (point1 < 3 && point2 < 3){
+  console.log('')
+
+} 
 let playAgain = prompt('Do you want to play again?')
 
 if(playAgain == 'no'){
@@ -74,5 +79,5 @@ if(playAgain == 'no'){
 } else if (playAgain == 'yes'){
   play();
 }
-}
+
 
