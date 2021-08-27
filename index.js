@@ -6,6 +6,7 @@
 //Explanation of how the game works
 console.log('Welcome to the card game! A card will be dealt and you will have to guess if the next card that is dealt will be higher or lower. If what you put is true you will get a point. First to 3 points wins!')
 
+//sets it so that each player starts with 0 points
 let point1 = 0;
 let point2 = 0;
 
@@ -26,7 +27,7 @@ let tableNumber2 = Math.floor(Math.random() * length + 1);
 
 console.log('The card that has been dealt is ' + tableNumber1)
 
-
+//player 1 guesses if the next card will be higher or lower
 let player1 = prompt('Player 1 do you think the next card will be higher or lower?')
 
 console.log('the next card is ' + tableNumber2)
@@ -54,6 +55,7 @@ tableNumber2 = Math.floor(Math.random() * length + 1);
 
 console.log('The next card that has been dealt is ' + tableNumber1)
 
+//player 2 guesses if the next card will be higher or lower
 let player2 = prompt('Player 2 do you think the next card will be higher or lower?')
 
 console.log('the next card is ' + tableNumber2)
@@ -76,7 +78,7 @@ if (tableNumber1 > tableNumber2 && player2 == 'higher'){
 }
 
 }
-//the loop stops when....
+//the loop stops when ...
 }while (point1 < 3 && point2 < 3){
   console.log('player 2 you win')
 } 
