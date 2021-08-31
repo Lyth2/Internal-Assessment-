@@ -4,7 +4,7 @@
 //Due - Monday 30 August
 
 //Explanation of how the game works
-console.log('Welcome to the card game! A card will be dealt and you will have to guess if the next card that is dealt will be higher or lower. If what you put is true you will get a point. First to 3 points wins!')
+console.log('Welcome to the card game! A card will be dealt and you will have to guess if the next card that is dealt will be higher or lower. If what you put is true you will get a point. First to 3 points wins!\n')
 
 //sets it so that each player starts with 0 points
 let point1 = 0;
@@ -14,29 +14,32 @@ let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
 let length = number.length
 
+//asks for the players names, so now insted of calling them player 1 or player 2 it will call them the names they input. p1N - player1Name p2N - player2Name
+p1N = prompt('player 1 what is your name?')
+p2N = prompt('player 2 what is your name?')
+
 //loop, so it keeps going untill one of the players gets 3 points
 do{
 
 play();
 function play(){
 
-//asks for the players names, so now insted of calling them player 1 or player 2 it will call them the names they input.
-p1N = prompt('player 1 what is your name?')
-p2N = prompt('player 2 what is your name?')
 
-//picks a random number 
+
+//picks a random number
 let tableNumber1 = Math.floor(Math.random() * length + 1);
 let tableNumber2 = Math.floor(Math.random() * length + 1);
 
 
-console.log('The card that has been dealt is ' + tableNumber1)
+console.log('\nThe card that has been dealt is ' + tableNumber1 + '\n')
 
 //player 1 guesses if the next card will be higher or lower
 let player1 = prompt(p1N + ' do you think the next card will be higher or lower?')
 
 console.log('the next card is ' + tableNumber2)
 
-//determains what happens if they input the right or wrong thing
+//determains what happens if they input the right or wrong thing 
+//e.g if the next card is lower and player 1 puts higher then the code will say you failed good job 
 if (tableNumber1 > tableNumber2 && player1 == 'higher'){
   console.log(p1N + ' you failed good job, you now have ' + point1 + ' points')
   
@@ -57,14 +60,15 @@ if (tableNumber1 > tableNumber2 && player1 == 'higher'){
 tableNumber1 = Math.floor(Math.random() * length + 1);
 tableNumber2 = Math.floor(Math.random() * length + 1);
 
-console.log('The next card that has been dealt is ' + tableNumber1)
+console.log('\nThe next card that has been dealt is ' + tableNumber1 + '\n')
 
 //player 2 guesses if the next card will be higher or lower
 let player2 = prompt(p2N + ' do you think the next card will be higher or lower?')
 
 console.log('the next card is ' + tableNumber2)
 
-//determains what happens with player 2 input
+//determains what happens if they input the right or wrong thing 
+//e.g if the next card is lower and player 2 puts higher then the code will say you failed good job 
 if (tableNumber1 > tableNumber2 && player2 == 'higher'){
   console.log(p2N + ' you failed good job, you now have ' + point2 + ' points')
  
